@@ -1,5 +1,3 @@
 export function FeedbackSuccessStep() {
-  return(
-    <h1>asdasd</h1>
-  )
+  return <h1>asdasd</h1>;
 }

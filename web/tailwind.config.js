@@ -1,13 +1,17 @@
+// eslint-disable-next-line no-undef
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: ['./src/**/*.tsx'],
+
   theme: {
     extend: {
       colors: {
-        brand:{
-          500: "#8257e6",
-        }
-      }
+        brand: {
+          500: '#8257e6',
+        },
+      },
     },
   },
-  plugins: [],
-}
+
+  // eslint-disable-next-line no-undef
+  plugins: [require('@tailwindcss/forms')],
+};
