@@ -12,15 +12,15 @@ export function ScreenshotButton({
   onScreenshotTook,
   screenshot,
 }: ScreenshotButtonProps) {
-  const [isTakingScreenshot, setIstakingSreenshot] = useState(false);
+  const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
 
   async function handleTakeScreenshot() {
-    setIstakingSreenshot(true);
+    setIsTakingScreenshot(true);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const canvas = await html2canvas(document.querySelector('html')!);
     const base64image = canvas.toDataURL('image/png');
     onScreenshotTook(base64image);
-    setIstakingSreenshot(false);
+    setIsTakingScreenshot(false);
   }
 
   if (screenshot) {
